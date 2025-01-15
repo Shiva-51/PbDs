@@ -28,13 +28,13 @@ public:
     oset<T>::iterator begin() {
         return s.begin();
     }
-    typename oset<T>::iterator end() {
+    oset<T>::iterator end() {
         return s.end();
     }
     void erase(typename oset<T>::iterator x) {
         s.erase(x);
     }
-    const T &operator[](int n) {
+    const T operator[](int n) {
         return *s.find_by_order(n);
     }
     int less(T x) {
