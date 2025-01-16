@@ -40,6 +40,12 @@ public:
         }
         return false;
     }
+    void eraseAll(T x) {
+        int l=s.order_of_key(x);
+        while(l + 1 <= ssize(s) and *s.find_by_order(l) == x) {
+            s.erase(s.find_by_order(l));
+        }
+    }
     void erase(omset<T>::iterator x) {
         s.erase(x);
     }
